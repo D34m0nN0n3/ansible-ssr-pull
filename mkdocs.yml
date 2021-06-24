@@ -13,7 +13,6 @@ use_directory_urls: false
 copyright: Copyright &copy; <a href="https://github.com/D34m0nN0n3">Dmitriy Prigoda</a>.
 
 nav:
-    - 'Начало документации': '../'
     - 'Общее описание': 'index.md'
     - 'Описание роли':
         - infra-system.linux.os.ansible-pull: 'pull.md'
@@ -50,6 +49,7 @@ theme:
     - navigation.expand
     - navigation.indexes
     - navigation.sections
+    - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
@@ -57,13 +57,13 @@ theme:
   palette:
     - scheme: default
       primary: blue grey
-      accent: indigo
+      accent: red
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to dark mode
     - scheme: slate
       primary: black
-      accent: indigo
+      accent: red
       toggle:
         icon: material/toggle-switch
         name: Switch to light mode
