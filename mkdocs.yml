@@ -1,10 +1,12 @@
 site_name: "Create systemd units for ansible-pull"
-site_url: https://D34m0nN0n3.github.io/ansible-ssr-pull/
+site_url: "https://D34m0nN0n3.github.io/ansible-ssr-pull/"
+site_author: "Dmitriy Prigoda"
 site_description: >-
   "Создание и активация сервиса и таймера ansible-pull"
 
 repo_name: D34m0nN0n3/ansible-ssr-pull
 repo_url: https://github.com/D34m0nN0n3/ansible-ssr-pull
+edit_uri: ""
 
 use_directory_urls: false
 
@@ -12,7 +14,7 @@ copyright: Copyright &copy; <a href="https://github.com/D34m0nN0n3">Dmitriy Prig
 
 nav:
     - Общее описание: 'index.md'
-    - Ansible pull: pull.md
+    - Ansible pull: 'pull.md'
     - Дополнительные материалы: 'seealso.md'
 
 plugins:
