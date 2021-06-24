@@ -14,7 +14,8 @@ copyright: Copyright &copy; <a href="https://github.com/D34m0nN0n3">Dmitriy Prig
 
 nav:
     - Общее описание: 'index.md'
-    - Ansible pull: 'pull.md'
+    - Описание роли:
+        - infra-system.linux.os.ansible-pull: 'pull.md'
     - Дополнительные материалы: 'seealso.md'
 
 plugins:
@@ -46,7 +47,6 @@ theme:
   features:
     - content.tabs.link
     - navigation.sections
-    - navigation.tabs
     - navigation.tracking
     - search.highlight
     - search.share
