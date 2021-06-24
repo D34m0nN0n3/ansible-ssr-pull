@@ -53,6 +53,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - toc.integrate
   palette:
     - scheme: default
       primary: blue grey
