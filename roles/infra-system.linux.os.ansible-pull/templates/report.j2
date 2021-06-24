@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style>
+     {% include 'includes/bootstrap/bootstrap.min.css' %}
+  </style>
+  <style>
+     {% include 'includes/bootstrap/bootstrap-select.min.css' %}
+  </style>
+  <title>Report</title>
+  {% include 'includes/styles.j2' %}
+</head>
+<body>
+<div class="container">
+<table class="table table-striped table-hover table-sm table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Hostname</th>
+            <th>IP Address</th>
+        </tr>
+    </thead>
+    <tbody>
+{% for host in groups['all'] %}
+        <tr>
+            <td><span data-toggle="tooltip" data-placement="left" class="badge badge-gray-dark">{{ hostvars[host]['ansible_fqdn'] }}</span></td>
+            <td><span data-toggle="tooltip" data-placement="left" class="badge badge-gray">{{ hostvars[host]['ansible_default_ipv4']['address'] }}</span></td>
+        </tr>
+{% endfor %}
+    </tbody>
+</table>
+</div>
+{% for host in groups['all'] %}
+{% set  = hostvars[host]['']['rc'] %}
+<div class="container">
+        <div>
+            <hr>
+        <div>
+            <p style="text-align: center"><span data-toggle="tooltip" data-placement="left" title="Role: slave, Type: Mix" class="badge badge-gray-dark">Git URL added: {{ hostvars[host]['ansible_fqdn'] }}</span></p>
+        </div>
+
+            </div>
+        </div>
+</div>
+{% endif %}
+{% endfor %}
+<div class="container">
+        <div>
+            <hr>
+            <p style="text-align: center"><span data-toggle="tooltip" data-placement="left" class="badge badge-gray">Complite on host succesed: {% for host in play_hosts %}</span> <span class="badge badge-gray">{{ host }}</span>{% if not loop.last %},{% endif %}{% endfor %} </p>
+        </div>
+</div>
+
+        <script>
+            {% include 'includes/bootstrap/bootstrap.min.js' %}
+        </script>
+
+        <script>
+            {% include 'includes/bootstrap/bootstrap-select.min.js' %}
+        </script>
+
+</body>
+</html>

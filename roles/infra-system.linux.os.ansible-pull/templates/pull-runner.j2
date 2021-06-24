@@ -1,0 +1,4 @@
+#{{ ansible_managed }}
+# Rules for ansible pull user
+{% if sudoers_pull_runner is defined %}{%   for rules in sudoers_pull_runner %}Cmnd_Alias SRULES_PULL = {{ rules }}{%   endfor %}{% endif %} 
+pull-runner  ALL=(ALL)   NOPASSWD: {% if sudoers_pull_runner is defined %}SRULES_PULL{% else %}ALL{% endif %}

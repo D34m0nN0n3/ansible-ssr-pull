@@ -1,0 +1,22 @@
+[Unit]
+Description=System configuration upgrade via ansible-pull 
+
+[Timer]
+{% if include_vars.timer_boot is defined or include_vars.timer_active is defined or include_vars.timer_calendar is defined %}
+{%  if include_vars.timer_boot is defined %}
+OnBootSec={{ include_vars.timer_boot }}
+{%  endif %}
+{%  if include_vars.timer_active is defined %}
+OnUnitActiveSec={{ include_vars.timer_active }}
+{%  endif %}
+{%  if include_vars.timer_calendar is defined %}
+OnCalendar={{ include_vars.timer_calendar }}
+{%  endif %}
+{% else %}
+OnCalendar=Weekly
+{% endif %}
+Unit=ansible-pull{% if include_vars.name is defined %}-{{ include_vars.name | default('') }}{% endif %}.service
+Persistent=true
+ 
+[Install]
+WantedBy=multi-user.target
