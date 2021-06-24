@@ -46,6 +46,8 @@ theme:
   language: ru
   features:
     - content.tabs.link
+    - navigation.expand
+    - navigation.indexes
     - navigation.sections
     - navigation.tracking
     - search.highlight
