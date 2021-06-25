@@ -5,7 +5,6 @@ Copyright (C) 2020 Dmitriy Prigoda deamon.none@gmail.com This script is free sof
 
 ## Содержание
 
-- ANSIBLE-PULL systemd service & temet
   - [Содержание](#содержание)
   - [Общее описание](#общее-описание)
   - [Параметры](#параметры)
