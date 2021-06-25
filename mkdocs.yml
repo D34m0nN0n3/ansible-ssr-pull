@@ -99,3 +99,9 @@ markdown_extensions:
       format: svg
   - markdown_include.include
   - markdown.extensions.attr_list 
+
+extra:
+  analytics:
+    provider: google
+    property: G-BT11X31T69
+
