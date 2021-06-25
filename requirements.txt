@@ -48,4 +48,3 @@ mkdocs-tooltipster-links-plugin
 mkdocs-thumbnails
 mkdocs-user-defined-values
 mkdocs-vim-md-tags-plugin
-mkdocs-with-pdf
