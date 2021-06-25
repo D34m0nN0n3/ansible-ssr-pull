@@ -34,11 +34,7 @@ plugins:
   - macros
   - minify:
       minify_html: true
-  - pdf-export:
-      media_type: print
-      combined: true
-      combined_output_path: pdf/Create_systemd_units_for_ansible-pull.pdf
-      theme_handler_path: theme-handler/material.py
+  - with-pdf
 
 theme:
   name: material
