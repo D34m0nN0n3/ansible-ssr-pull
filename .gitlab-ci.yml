@@ -12,9 +12,10 @@
     stage: texdocs
     script:
       - echo exist
+      - ls -l
     rules:
       - exists:
-        - material
+        - material/mkdocs_theme.yml
 
   build:
     only:
