@@ -17,9 +17,8 @@
     stage: texdocs
     script:
       - echo exist
-    rules:
-      - exists:
-        - material
+    extends:
+      - .check_rule
 
   build:
     only:
