@@ -1,6 +1,6 @@
   stages:
-    - build
-  test:
+    - texdocs
+  check:
     only:
       - main
 #    refs:
@@ -8,7 +8,21 @@
 #      - merge_requests
     tags:
       - mkdocs
-    stage: build
+    stage: texdocs
+    rules:
+      - exists:
+        - material
+    script:
+      - echo exist
+  build:
+    only:
+      - main
+#    refs:
+#      - master
+#      - merge_requests
+    tags:
+      - mkdocs
+    stage: texdocs
     script:
       - echo $CI_PROJECT_NAME
       - pwd
