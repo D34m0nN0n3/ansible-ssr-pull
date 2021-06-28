@@ -1,5 +1,6 @@
   stages:
     - texdocs
+
   check:
     only:
       - main
@@ -8,12 +9,13 @@
 #      - merge_requests
     tags:
       - mkdocs
-    stage: texdocs
     rules:
       - exists:
         - material
+    stage: texdocs
     script:
       - echo exist
+
   build:
     only:
       - main
