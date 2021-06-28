@@ -31,7 +31,6 @@ mkdocs-autozip
 mkdocs-encryptcontent-plugin
 mkdocs-exclude
 mkdocs-bootstrap-tables-plugin
-mkdocs-pdf-export-plugin
 mkdocs-macros-plugin
 mkdocs-material>=5.3.3
 mkdocs-material-extensions>=1.0
@@ -48,3 +47,4 @@ mkdocs-tooltipster-links-plugin
 mkdocs-thumbnails
 mkdocs-user-defined-values
 mkdocs-vim-md-tags-plugin
+mkdocs-with-pdf

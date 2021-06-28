@@ -20,7 +20,6 @@ nav:
 
 plugins:
   - autolinks
-  - autozip
   - search:
       lang:
         - en
@@ -34,11 +33,15 @@ plugins:
   - macros
   - minify:
       minify_html: true
-  - pdf-export:
-      media_type: print
-      combined: true
-      combined_output_path: pdf/Create_systemd_units_for_ansible-pull.pdf
-      theme_handler_path: theme-handler/material.py
+  - with-pdf:
+      output_path: Create_systemd_units_for_ansible-pull.pdf
+
+extra_css:
+    - assets/extra.css
+
+extra_javascript:
+  - assets/extra.js
+  - assets/tex-mml-chtml.js
 
 theme:
   name: material
@@ -101,7 +104,7 @@ markdown_extensions:
   - markdown.extensions.attr_list 
 
 extra:
+  generator: false
   analytics:
     provider: google
     property: G-BT11X31T69
-
