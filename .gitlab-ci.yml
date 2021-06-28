@@ -11,10 +11,11 @@
       - mkdocs
     stage: texdocs
     rules:
-      - exists:
+      - if: '$CI_PIPELINE_SOURCE == "main"'
+        exists:
         - material/mkdocs_theme.yml
     script:
-      - echo exist
+      - echo "exist"
       - ls -l
 
   build:
