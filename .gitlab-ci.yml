@@ -7,8 +7,8 @@
     script:
       - echo "exist"
       - ls -l
-      - echo $CI_PROJECT_ROOT_NAMESPACE
       - echo $CI_BUILDS_DIR
+      - ll -l $CI_BUILDS_DIR
 
   build:
     only:
