@@ -1,16 +1,14 @@
-  stages:
-    - texdocs
-
   check:
     tags:
       - mkdocs
-    stage: texdocs
     rules:
       - exists:
           - material/mkdocs_theme.yml
     script:
       - echo "exist"
       - ls -l
+      - echo $CI_PROJECT_ROOT_NAMESPACE
+      - echo $CI_BUILDS_DIR
 
   build:
     only:
@@ -20,7 +18,6 @@
 #      - merge_requests
     tags:
       - mkdocs
-    stage: texdocs
     script:
       - echo $CI_PROJECT_NAME
       - pwd
