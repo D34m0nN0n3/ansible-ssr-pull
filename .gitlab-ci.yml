@@ -1,19 +1,13 @@
   stages:
     - texdocs
 
-  .check_rule:
-    rules:
-      - exists:
-        - material
-
   check:
     tags:
       - mkdocs
     stage: texdocs
     rules:
-      - if: '$CI_PIPELINE_SOURCE == "main"'
-        exists:
-        - material/mkdocs_theme.yml
+      - exists:
+          - material/mkdocs_theme.yml
     script:
       - echo "exist"
       - ls -l
