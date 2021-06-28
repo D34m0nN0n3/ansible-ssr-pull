@@ -34,6 +34,8 @@ plugins:
   - minify:
       minify_html: true
   - with-pdf:
+      author: Dmitriy Prigoda
+      copyright: Dmitriy Prigoda
       output_path: Create_systemd_units_for_ansible-pull.pdf
 
 extra_css:
