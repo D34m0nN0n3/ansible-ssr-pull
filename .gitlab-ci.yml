@@ -2,7 +2,7 @@
     - build
   test:
     only:
-      - master
+      - main
 #    refs:
 #      - master
 #      - merge_requests
