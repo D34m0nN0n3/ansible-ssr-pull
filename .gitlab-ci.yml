@@ -7,18 +7,14 @@
         - material
 
   check:
-    only:
-      - main
-#    refs:
-#      - master
-#      - merge_requests
     tags:
       - mkdocs
     stage: texdocs
     script:
       - echo exist
-    extends:
-      - .check_rule
+    rules:
+      - exists:
+        - material
 
   build:
     only:
