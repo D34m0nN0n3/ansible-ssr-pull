@@ -1,0 +1,17 @@
+  stages:
+    - build
+  test:
+    only:
+      - master
+#    refs:
+#      - master
+#      - merge_requests
+    tags:
+      - mkdocs
+    stage: build
+    script:
+      - echo $CI_PROJECT_NAME
+      - pwd
+      - ls -alZ
+      - hostname -f
+      - whoami & id
