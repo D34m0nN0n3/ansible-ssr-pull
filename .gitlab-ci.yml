@@ -10,12 +10,12 @@
     tags:
       - mkdocs
     stage: texdocs
-    script:
-      - echo exist
-      - ls -l
     rules:
       - exists:
         - material/mkdocs_theme.yml
+    script:
+      - echo exist
+      - ls -l
 
   build:
     only:
