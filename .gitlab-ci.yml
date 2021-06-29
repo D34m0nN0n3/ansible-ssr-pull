@@ -13,9 +13,6 @@
   02-build:
     only:
       - main
-    refs:
-      - main
-      - merge_requests
     tags:
       - mkdocs
     script:
