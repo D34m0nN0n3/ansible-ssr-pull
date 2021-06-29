@@ -16,4 +16,4 @@
     tags:
       - mkdocs
     script:
-      - sudo -u mkdocs mkdocs build -c -f texdocs.yml -d /var/www/base/docs/Ansible-pull
+      - sudo su - mkdocs -c "mkdocs build -c -f texdocs.yml -d /var/www/base/docs/Ansible-pull"
