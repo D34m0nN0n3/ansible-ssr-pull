@@ -19,4 +19,4 @@
     tags:
       - mkdocs
     script:
-      - cd ${CI_PROJECT_DIR} && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/${VIRT_SITE_NAME}
+      - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/$VIRT_SITE_NAME
