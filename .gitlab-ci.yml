@@ -1,4 +1,4 @@
-  check:
+  01-check:
     tags:
       - mkdocs
     rules:
@@ -10,17 +10,12 @@
       - echo $CI_BUILDS_DIR
       - ls -l $CI_BUILDS_DIR
 
-  build:
+  02-build:
     only:
+    refs:
       - main
-#    refs:
-#      - master
-#      - merge_requests
+      - merge_requests
     tags:
       - mkdocs
     script:
-      - echo $CI_PROJECT_NAME
-      - pwd
-      - ls -alZ
-      - hostname -f
-      - whoami & id
+      - sudo -u mkdocs mkdocs build -c -f texdocs.yml -d /var/www/base/docs/Ansible-pull
