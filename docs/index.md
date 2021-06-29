@@ -5,7 +5,3 @@
 ## Название ролей
 
 * infra-system.linux.os.ansible-pull
-
-
-git data {{ page.meta.revision_date }}
-git data localized {{ page.meta.git_revision_date_localized }}
