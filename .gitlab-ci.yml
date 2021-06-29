@@ -6,9 +6,12 @@
       - mkdocs
     rules:
       - exists:
-          - !material/mkdocs_theme.yml
+          - material/mkdocs_theme.yml
+        when: never
+      - when: always
     script:
       - echo "not exist"
+        
 
   02-build:
     only:
