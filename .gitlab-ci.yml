@@ -19,7 +19,6 @@
     tags:
       - mkdocs
     script:
-      - sudo -u mkdocs -s
       - echo $CI_PROJECT_NAME
       - pwd
       - ls -alZ
