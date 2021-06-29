@@ -1,14 +1,14 @@
+  variables:
+    VIRT_SITE_NAME: "Настройка ansible pull"
+
   01-check:
     tags:
       - mkdocs
     rules:
       - exists:
-          - material/mkdocs_theme.yml
+          - !material/mkdocs_theme.yml
     script:
-      - echo "exist"
-      - ls -l
-      - echo $CI_BUILDS_DIR
-      - ls -l $CI_BUILDS_DIR
+      - echo "not exist"
 
   02-build:
     only:
@@ -16,4 +16,4 @@
     tags:
       - mkdocs
     script:
-      - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/Ansible-pull
+      - cd ${CI_PROJECT_DIR} && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/${VIRT_SITE_NAME}
