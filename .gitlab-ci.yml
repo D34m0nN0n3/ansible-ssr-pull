@@ -1,22 +1,27 @@
-  variables:
-    VIRT_SITE_NAME: "Настройка ansible pull"
+stages:
+  - deploy
 
-  01-check:
-    tags:
-      - mkdocs
-    rules:
-      - exists:
-          - material/test
-        when: never
-      - when: always
-    script:
-      - echo "not exist"
+variables:
+  VIRT_SITE_NAME: "Настройка ansible pull"
+
+check:
+  stage: .pre
+  tags:
+    - mkdocs
+  rules:
+    - exists:
+        - material/test
+      when: never
+    - when: always
+  script:
+    - echo "not exist"
         
 
-  02-build:
-    only:
-      - main
-    tags:
-      - mkdocs
-    script:
-      - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/$VIRT_SITE_NAME
+deploy:
+  stage: deploy
+  only:
+    - main
+  tags:
+    - mkdocs
+  script:
+    - cd $CI_PROJECT_DIR && sudo -u mkdocs /var/mkdocs/.local/bin/mkdocs build -c -f texdocs.yml -d /var/www/base/docs/$VIRT_SITE_NAME
