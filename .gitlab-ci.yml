@@ -16,6 +16,4 @@
     tags:
       - mkdocs
     script:
-      - pwd
-      - sudo -u mkdocs -c "echo $CI_PROJECT_DIR"
-      - sudo -u mkdocs -c "mkdocs build -c -f texdocs.yml -d /var/www/base/docs/Ansible-pull"
+      - sudo -u mkdocs .local/bin/mkdocs build -c -f $CI_PROJECT_DIR/texdocs.yml -d /var/www/base/docs/Ansible-pull"
