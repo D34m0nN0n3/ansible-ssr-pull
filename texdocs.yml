@@ -2,7 +2,7 @@ site_name: "Создание systemd таймеров для запуска ansi
 site_url: "https://D34m0nN0n3.github.io/ansible-ssr-pull/"
 site_author: "Dmitriy Prigoda"
 site_description: >-
-  "Создание и активация сервиса и таймера ansible-pull"
+  Создание и активация сервиса и таймера ansible-pull
 
 repo_name: D34m0nN0n3/ansible-ssr-pull
 repo_url: http://gitlab-lb-01.gvc.oao.rzd/d34m0nn0n3/ansible-ssr-pull
