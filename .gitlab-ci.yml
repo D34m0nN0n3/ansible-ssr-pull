@@ -4,7 +4,9 @@ stages:
 deploy:
   stage: deploy
   only:
+    - main
     - master
+    - merge_requests
   tags:
     - mkdocs
   before_script:
