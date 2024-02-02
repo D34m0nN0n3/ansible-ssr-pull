@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+/* attribute classes to be used via {: .class} */
+.left {
+  /* left align with text float on the right */
+  float: left;
+  padding-right: 20px;
+}
+.right {
+  /* right align with text float on the left */
+  float: right;
+  padding-left: 20px;
+}
+.icon {
+  /* change image size */
+  width: 25%;
+}
+.border {
+  /* add drop shadow */
+  border: 1px solid #021a40;
+  -webkit-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.5);
+}
+/* image zoom */
+img {
+  height: auto;
+  width: auto;
+}
+.zoom,
+.zoom2 {
+  transition: transform ease-in-out 0.5s;
+  cursor: zoom-in;
+}
+.image-zoom {
+  background: #000;
+  transform: scale(1);
+  cursor: zoom-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  position: absolute;
+}
+.image-zoom2 {
+  background: #000;
+  transform: scale(1.5);
+  cursor: zoom-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  position: absolute;
+}
